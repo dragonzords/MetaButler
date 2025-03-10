@@ -106,7 +106,7 @@ def send_help(chat_id, text, keyboard=None):
 
     if not keyboard:
         kb = paginate_modules(0, HELPABLE, "help")
-        # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/MetaProjectsSupport'),
+        # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/LynxBotList'),
         #           InlineKeyboardButton(text='Back', callback_data='start_back'),
         #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
         keyboard = InlineKeyboardMarkup(kb)
@@ -157,15 +157,15 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                         [
                             InlineKeyboardButton(
                                 text=gs(chat.id, "support_chat_link_btn"),
-                                url="https://t.me/MetaProjectsSupport",
+                                url="https://t.me/LynxBotList",
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "updates_channel_link_btn"),
-                                url="https://t.me/metabutlernews",
+                                url="https://t.me/LynxBotList",
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "src_btn"),
-                                url="https://github.com/MetaButler/MetaButler",
+                                url="https://rb.gy/pha7jy",
                             ),
                         ],
                         [
@@ -218,7 +218,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                     [
                         InlineKeyboardButton(text="Back", callback_data="help_back"),
                         InlineKeyboardButton(
-                            text="Support", url="https://t.me/MetaProjectsSupport"
+                            text="Support", url="https://t.me/LynxBotList"
                         ),
                     ]
                 )
@@ -258,15 +258,15 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                         [
                             InlineKeyboardButton(
                                 text=gs(chat.id, "support_chat_link_btn"),
-                                url="https://t.me/MetaProjectsSupport",
+                                url="https://t.me/LynxBotlist",
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "updates_channel_link_btn"),
-                                url="https://t.me/metabutlernews",
+                                url="https://t.me/LynxBotList",
                             ),
                             InlineKeyboardButton(
                                 text=gs(chat.id, "src_btn"),
-                                url="https://github.com/MetaButler/MetaButler",
+                                url="https://rb.gy/pha7jy",
                             ),
                         ],
                         [
@@ -364,7 +364,7 @@ def help_button(update: Update, context: CallbackContext):
                 [
                     InlineKeyboardButton(text="Back", callback_data="help_back"),
                     InlineKeyboardButton(
-                        text="Support", url="https://t.me/MetaProjectsSupport"
+                        text="Support", url="https://t.me/LynxBotList"
                     ),
                 ]
             )
@@ -377,7 +377,7 @@ def help_button(update: Update, context: CallbackContext):
         elif prev_match:
             curr_page = int(prev_match.group(1))
             kb = paginate_modules(curr_page - 1, HELPABLE, "help")
-            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/MetaProjectsSupport'),
+            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/LynxBotlist'),
             #           InlineKeyboardButton(text='Back', callback_data='start_back'),
             #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
             query.message.edit_text(
@@ -389,7 +389,7 @@ def help_button(update: Update, context: CallbackContext):
         elif next_match:
             next_page = int(next_match.group(1))
             kb = paginate_modules(next_page + 1, HELPABLE, "help")
-            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/MetaProjectsSupport'),
+            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/LynxBotList'),
             #           InlineKeyboardButton(text='Back', callback_data='start_back'),
             #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
             query.message.edit_text(
@@ -400,7 +400,7 @@ def help_button(update: Update, context: CallbackContext):
 
         elif back_match:
             kb = paginate_modules(0, HELPABLE, "help")
-            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/MetaProjectsSupport'),
+            # kb.append([InlineKeyboardButton(text='Support', url='https://t.me/LynxBotList'),
             #           InlineKeyboardButton(text='Back', callback_data='start_back'),
             #           InlineKeyboardButton(text="Try inline", switch_inline_query_current_chat="")])
             query.message.edit_text(
@@ -493,7 +493,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     InlineKeyboardButton(text="Back", callback_data="help_back"),
                     InlineKeyboardButton(
-                        text="Support", url="https://t.me/MetaProjectsSupport"
+                        text="Support", url="https://t.me/LynxBotList"
                     ),
                 ]
             )
